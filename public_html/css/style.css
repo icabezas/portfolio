@@ -1,17 +1,17 @@
 body{
-    background-color: #b5b5b5;
+    background-color:rgba(204, 214, 220, 1);
 }
 
 /* keyframes for rotating animation */
 @-webkit-keyframes spin {
-    from { transform: rotateY(0); }
-    to   { transform: rotateY(180deg); }
+    from { transform: rotatex(-50deg) rotateY(180deg); }
+    to   { transform: rotatex(-50deg) rotateY(0); }
 }
 
 /* scene wrapper */
 .wrapper{
     height: 300px;
-    margin-top:50px;
+    margin-top:100px;
     position:relative;
     perspective: 800;
     perspective-origin: 50% 100px;
@@ -19,11 +19,12 @@ body{
 
 /* cube wrapper */
 .cube{
+    cursor: help;
     position: relative;
     margin: 0 auto;
     width: 200px;
     transform-style: preserve-3d;
-    animation: spin 4s infinite linear;
+    animation: spin 10s infinite linear;
     transition: all 1s linear;
 }
 
@@ -34,23 +35,38 @@ i{
     top:50px;
     left:50px;
     width:100px;
-    height:50px;
+    height:70px;
     display:block;
     transition: all 1s linear;
+}
+
+b{
+    position:absolute;
+    top:50px;
+    left:50px;
+    width:100px;
+    height:50px;
+    display:block;
+    transition: all 1s linear; 
 }
 
 i.front{
     background-color: #257d8b;
     transform: translateZ(50px);
 }
+
 i.back{
     background-color: #257d8b;
     transform: translateZ(-50px) rotateY(180deg);
 }
-i.bottom{
+/*i.bottom{
     transform:rotateX(-90deg) translateY(50px);
     transform-origin: left bottom;
 }
+i.bottom2{
+    transform:rotateX(-90deg) translateY(50px);
+    transform-origin: left bottom;
+}*/
 i.left{
     background-color: #aceefa;
     transform:rotateY(270deg) translateX(-50px);
@@ -62,19 +78,62 @@ i.right{
     transform-origin: top right;
 }
 i.top{
+    height: 100px;
     background-color: #3fcbe4;
     transform:rotateX(-270deg) translateY(-50px);
     transform-origin: left top;
 }
-
-/* hover transformations 
-.cube:hover{
-  top:150px;
+b.top2{
+    height: 300px;
+    top: 180px;
+    height: 100px;
+    background-color: #f459be;
+    transform:rotateX(-270deg) translateY(-50px);
+    transform-origin: left top;
 }
-.cube:hover b.top{
-  transform: translateZ(100px) rotateX(-210deg);
-  transform-origin: top center;
+b.front2{
+    height: 300px;
+    top:180px;
+    /*background-color: #992971;*/
+    background: linear-gradient(to bottom, rgba(153, 41, 113, 1), rgba(204, 214, 220, 1));
+    transform: translateZ(50px);
 }
-.cube:hover i{
-  top:-200px;
+b.right2{
+    height: 300px;
+    top: 180px;
+    background: linear-gradient(to bottom, rgba(236, 180, 217, 1), rgba(204, 214, 220, 1));
+    /*background-color: #ecb4d9;*/
+    transform:rotateY(-270deg) translateX(50px);
+    transform-origin: top right;
+}
+b.back2{
+    height: 300px;
+    top:180px;
+    /*background-color: #992971;*/
+    background: linear-gradient(to bottom, rgba(153, 41, 113, 1), rgba(204, 214, 220, 1));
+    transform: translateZ(-50px) rotateY(180deg);
+}
+b.left2{
+    height: 300px;
+    top: 180px;
+    /*background-color: #ecb4d9;*/
+    background: linear-gradient(to bottom, rgba(236, 180, 217, 1), rgba(204, 214, 220, 1));
+    transform:rotateY(270deg) translateX(-50px);
+    transform-origin: center left;
+}
+/*.shadow {
+    height: 50px;
+    width: 50px;
+    top: 179px;
+    background-color: black;
+    transform:rotateX(-270deg) translateY(0px);
+    transform-origin: left top;
+    filter: blur(2em);
 }*/
+
+/*CLASES PARA JQUERY*/
+
+.desplazarIz{
+
+}
+
