@@ -29,7 +29,6 @@ body{
 }
 
 
-/* inner cube */
 i{
     position:absolute;
     top:50px;
@@ -94,7 +93,6 @@ b.top2{
 b.front2{
     height: 300px;
     top:180px;
-    /*background-color: #992971;*/
     background: linear-gradient(to bottom, rgba(153, 41, 113, 1), rgba(204, 214, 220, 1));
     transform: translateZ(50px);
 }
@@ -102,34 +100,31 @@ b.right2{
     height: 300px;
     top: 180px;
     background: linear-gradient(to bottom, rgba(236, 180, 217, 1), rgba(204, 214, 220, 1));
-    /*background-color: #ecb4d9;*/
     transform:rotateY(-270deg) translateX(50px);
     transform-origin: top right;
 }
 b.back2{
     height: 300px;
     top:180px;
-    /*background-color: #992971;*/
     background: linear-gradient(to bottom, rgba(153, 41, 113, 1), rgba(204, 214, 220, 1));
     transform: translateZ(-50px) rotateY(180deg);
 }
 b.left2{
     height: 300px;
     top: 180px;
-    /*background-color: #ecb4d9;*/
     background: linear-gradient(to bottom, rgba(236, 180, 217, 1), rgba(204, 214, 220, 1));
     transform:rotateY(270deg) translateX(-50px);
     transform-origin: center left;
 }
-/*.shadow {
+.shadow {
     height: 50px;
     width: 50px;
-    top: 179px;
+    top: 180px;
     background-color: black;
-    transform:rotateX(-270deg) translateY(0px);
+    transform:rotateX(-270deg) translateY(-25px) translateX(25px);
     transform-origin: left top;
-    filter: blur(2em);
-}*/
+    filter: blur(1.5em);
+}
 
 /*CLASES PARA JQUERY*/
 
